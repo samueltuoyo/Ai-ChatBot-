@@ -31,8 +31,6 @@ header h1{
     padding: 20px;
     width: 100%;
     margin-bottom: 60px;
-    height: 400px;
-    overflow-y: auto;
 }
 
 #container .chat-bot-response{
