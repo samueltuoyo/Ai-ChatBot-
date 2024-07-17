@@ -3,9 +3,11 @@ const chatBtn = document.querySelector('.chat-btn');
 const chatMessages = document.querySelector('#container')
 const spinner= document.querySelector('.spinner')
 
+
 // generate ai response 
+
 function generate(){
-      let userMessage = document.createElement('div');
+     let userMessage = document.createElement('div');
       userMessage.className = 'user-chat-message';
       userMessage.innerText = chatInput.value;
       chatMessages.appendChild(userMessage);
@@ -18,17 +20,17 @@ function generate(){
        aiResponse.className = 'chat-bot-response';
       
    switch (chatInput.value.trim(' ')) {
-       case 'hello how are you doing?', 'hello', 'good morning': 
-       aiResponse.innerText = 'in doing great and you?';
+       case 'Hello how are you doing?', 'hello', 'good morning', 'hi', 'hello', 'Hello', 'whats up?', 'Hi': 
+       aiResponse.innerText = 'Am doing great and you?';
        break;
-       case 'who created you?', 'who made you', 'who built you', 'where you created': 
+       case 'Who created you?', 'Who made you', 'Who built you', 'where you created': 
        aiResponse.innerText = 'I was Created by Samuel Tuoyo on July 17th 2024, i was a mini project he decided to out hands into';
        break;
-       case 'fuck you', 'you are very useless', 'fuck you', 'mumu' : 
+       case 'Fuck you', 'Your are very useless', 'Fuck you ai', 'mumu', 'fool' : 
        aiResponse.innerHTML = "please no abusive words here 😡";
        break;
-       case "whos birthday is today in <TechWithLevi/>":
-       aiResponse.innerHTML = 'it <strong>Kingsley Esisi</strong> 😀, i hope you guys wish him well';
+       case 'Please tell me how to get One Million Naira in a minute 😂', 'afar any update', 'can i hack you', 'Abeg i dey find money', 'abeg i dey find money':
+       aiResponse.innerText = 'go find work na , abeg off your phone make you go sleep 🤣';
        break;
        default:
        aiResponse.innerText = 'sorry i didnt get that';
